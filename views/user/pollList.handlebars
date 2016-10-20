@@ -1,0 +1,15 @@
+<div >
+
+    <h1 name="entitled">Polls List</h1>
+
+      <ul class="votees" style="list-style: none">
+
+      {{#each poll}}
+
+        <li id="pollOptions"><a href="{{this.url2}}" id="linked">{{this.title}}</a><div class="delete" id="delete" type="text">X</div></li>
+
+      {{/each}}
+
+      </ul>
+
+</div>

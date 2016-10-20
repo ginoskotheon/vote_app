@@ -1,0 +1,39 @@
+
+<div class="contactUs">
+<h4>Create a Poll</h4>
+<form class="formPoll" role="form"
+  action="/user/polled?form=vote" method="POST">
+
+  <div class="form-group">
+    <label for="fieldTitle" class="col-sm-2 control-label">
+    Title</label>
+    <div class="col-sm-4">
+      <input type="hidden" name="_csrf" value={{csrfToken}}>
+      <input type="text" class="form-control" id="fieldTitle"
+      name="title">
+    </div>
+  </div> <!-- End of form-group -->
+
+  <div class="form-group">
+    <label for="fieldOpts" class="col-sm-2 control-label">
+    Options</label>
+    <div class="col-sm-4 choices">
+      <input type="text" class="form-control" id="fieldOpts"
+      name="opts">
+      <input type="text" class="form-control" id="fieldOpts"
+      name="opts">
+    </div>
+  </div> <!-- End of form-group -->
+
+  <div class="form-group">
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div> <!-- End of form-group -->
+
+  </form>
+    <div class="col-sm-4">
+      <button class="btn btn-default" id="addOption">Add Option</button>
+    </div>
+
+</div>

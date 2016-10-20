@@ -1,0 +1,27 @@
+<div class="page-header">
+
+    <!-- <h1 name="entitled">The Poll</h1> -->
+    <!-- <h1 name="titles" value="{{data.titles}}">{{data.title}}</h1> -->
+    <form action="/user/voted?form=voted" method="POST">
+
+      <ul class="votees" style="list-style: none">
+        {{#each data}}
+        <h1>{{this.title}}</h1>
+        <input type="readonly" name="titles" id="titled" value="{{this.title}}"></Input>
+        {{#each this.options}}
+        <li>
+          <input type="radio" id="{{@key}}" value="{{this}}" name="chosen"/>
+          <label for="{{@key}}">{{this}}</label>
+          <div class="check"><div class="inside"></div></div>
+        </li>
+        {{/each}}
+        {{/each}}
+      </ul>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+      </form>
+    </div>
+</div>

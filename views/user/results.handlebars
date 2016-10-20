@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h3>Here are the results:</h3>
+
+</div>
+<ul style="list-style: none; display: linear">
+  {{#each poll}}
+  <li>
+    <div>{{this.title}}
+      <h2>Total votes: {{this.total}}</h2>
+      <ul class="number">
+        {{#each this.voted}}
+        <li>  {{this.name}}: <span>{{this.votes}} </span>
+          <div class="bar">
+            <div class="bar-inner" data-percent="{{this.votes}}">
+
+            </div>
+          </div>
+
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </li>
+  {{/each}}
+
+</ul>
