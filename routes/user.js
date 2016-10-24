@@ -37,7 +37,7 @@ router.post('/polled', isLoggedIn, function(req,res){
   var item = {
     user: req.user,
     title: req.body.title,
-    url: "localhost:3000/user/polled/"+ marks,
+    url: "https://vote-app-ginoskotheon.c9users.io/user/polled/"+ marks,
     url2: "/user/results/" + marked,
     options: req.body.opts,
     voted: arr,
@@ -68,7 +68,7 @@ router.get('/polled/:title', function(req, res){
   Vote.find({title: title}).then(function(doc){
 
 
-    res.render('user/polled', {data: doc});
+    res.render('user/polled', {data: doc, title: 'Make a Vote', layout: 'pre' });
   });
 });
 

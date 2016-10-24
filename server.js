@@ -15,15 +15,11 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-
-
-
-
 require('dotenv').load();
 // require('./config/passport')(passport);
 require('./config/passport2');
 
-mongoose.connect('localhost:27017/voteapp');
+mongoose.connect(process.env.MONGO_URI);
 
 //view engine
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});

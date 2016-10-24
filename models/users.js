@@ -9,6 +9,10 @@ var User = new Schema({
 		displayName: String,
 		username: String,
       publicRepos: Number
+	},
+	local: {
+		email: {type: String, required: true},
+		password: {type: String, required: true}
 	}
 });
 

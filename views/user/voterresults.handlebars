@@ -6,9 +6,19 @@
   {{#each poll}}
   <li>
     <div>{{this.title}}
-      <ul class="number" style="list-style: none"> {{#each this.voted}}<li>
+      <h2>Total votes: {{this.total}}</h2>
+      <ul class="number">
+        {{#each this.voted}}
+        <li>  {{this.name}}: <span>{{this.votes}} </span>
+          <div class="bar">
+            <div class="bar-inner" data-percent="{{this.votes}}">
 
-      {{this.name}}: <span>{{this.votes}} </span></li>{{/each}}</ul>
+            </div>
+          </div>
+
+        </li>
+        {{/each}}
+      </ul>
     </div>
   </li>
   {{/each}}
